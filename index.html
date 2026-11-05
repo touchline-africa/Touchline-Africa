@@ -3,56 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#071b17">
-  <meta name="description" content="Touchline Africa — the global game, with an African heartbeat. Football news, analysis, fixtures and stories from every corner of the game.">
-  <title>Touchline Africa | The Global Game. African Heartbeat.</title>
+  <meta name="theme-color" content="#071b18">
+  <meta name="description" content="Touchline Africa — your global football destination. News, match coverage, analysis and stories from every corner of the game.">
+  <title>Touchline Africa | The world of football, in one place</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="topline"><div class="wrap topline-inner"><span>THE GLOBAL GAME. THE AFRICAN HEARTBEAT.</span><span id="today"></span></div></div>
+  <div class="topline"><div class="wrap topline-inner"><span>THE GLOBAL GAME. THE AFRICAN PERSPECTIVE.</span><span class="top-date" id="today-date"></span></div></div>
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#" aria-label="Touchline Africa home"><span class="brand-mark">T<span>A</span></span><span class="brand-name">TOUCHLINE <b>AFRICA</b><small>FOOTBALL, WITHOUT BORDERS</small></span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-      <nav class="main-nav" id="mainNav">
-        <a class="active" href="#home">Home</a><a href="#latest">News</a><a href="#africa">African Football</a><a href="#world">World Football</a><a href="#fixtures">Fixtures</a><a href="#leagues">Leagues</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="main-nav">
+        <a class="active" href="#home">Home</a><a href="#latest">News</a><a href="#africa">African Football</a><a href="#world">World Football</a><a href="#fixtures">Fixtures</a><a href="#features">Features</a>
       </nav>
-      <a class="header-cta" href="#newsletter">Stay in the game <span>↗</span></a>
+      <button class="search-toggle" id="search-toggle" aria-label="Open search">⌕</button>
     </div>
+    <div class="search-panel wrap" id="search-panel"><input id="search-input" type="search" placeholder="Search teams, leagues, players and stories…" aria-label="Search football stories"><button id="clear-search">Clear</button></div>
   </header>
   <main id="home">
+    <section class="breaking"><div class="wrap breaking-inner"><span class="breaking-label"><i></i> THE TOUCHLINE</span><p>One game. Every continent. Your home for the stories shaping football.</p><a href="#latest">Explore the latest <b>→</b></a></div></section>
     <section class="hero wrap">
-      <div class="hero-copy">
-        <div class="eyebrow"><i></i> YOUR HOME FOR THE BEAUTIFUL GAME</div>
-        <h1>FOOTBALL<br><em>HAS NO</em><br>BORDERS.</h1>
-        <p>From the streets of Lagos to the bright lights of Europe. Every league, every story, every moment — seen through an African lens.</p>
-        <div class="hero-actions"><a class="btn btn-lime" href="#latest">Explore the latest <span>→</span></a><a class="text-link" href="#africa">Discover African football <span>↗</span></a></div>
+      <div class="hero-main">
+        <div class="hero-image" role="img" aria-label="Football stadium under floodlights"></div>
+        <div class="hero-shade"></div>
+        <div class="hero-copy"><span class="eyebrow">THE BEAUTIFUL GAME · EVERYWHERE</span><h1>THE WORLD<br>PLAYS <em>HERE.</em></h1><p>From the streets of Lagos to the biggest stages in Europe. The stories, people and moments that make football matter.</p><a class="button button-lime" href="#latest">Discover the stories <span>→</span></a></div>
+        <div class="hero-index"><b>01</b><span> / 04</span></div>
       </div>
-      <div class="hero-art" role="img" aria-label="Abstract football pitch graphic">
-        <div class="pitch-lines"></div><div class="hero-ball">⚽</div><div class="hero-stamp">90'<br><small>AND BEYOND</small></div>
-        <div class="hero-caption"><span>01 / THE WORLD'S GAME</span><b>ONE PASSION.<br>ONE COMMUNITY.</b></div>
-      </div>
+      <aside class="hero-side">
+        <div class="side-heading"><span>IN FOCUS</span><span class="live-dot">● EDITOR'S PICK</span></div>
+        <article class="focus-card"><div class="focus-photo photo-africa"></div><div><span class="category">AFRICAN FOOTBALL</span><h3>A continent united by the beautiful game</h3><a href="#africa">Explore African football ↗</a></div></article>
+        <article class="focus-card"><div class="focus-photo photo-world"></div><div><span class="category">WORLD FOOTBALL</span><h3>Big leagues. Bold stories. Global voices.</h3><a href="#world">Explore world football ↗</a></div></article>
+      </aside>
     </section>
-    <section class="ticker"><div class="wrap ticker-inner"><span class="ticker-label">THE TOUCHLINE</span><div class="ticker-track">AFRICAN FOOTBALL <b>✳</b> WORLD CUP ROAD <b>✳</b> TRANSFER WATCH <b>✳</b> MATCHDAY STORIES <b>✳</b> THE NEXT GENERATION <b>✳</b></div></div></section>
+    <section class="ticker"><div class="wrap ticker-inner"><strong>ON THE RADAR</strong><span>PREMIER LEAGUE</span><i>✦</i><span>CAF</span><i>✦</i><span>LA LIGA</span><i>✦</i><span>CHAMPIONS LEAGUE</span><i>✦</i><span>WOMEN'S FOOTBALL</span><i>✦</i><span>WORLD CUP</span></div></section>
     <section class="section wrap" id="latest">
-      <div class="section-head"><div><div class="eyebrow">WHAT'S HAPPENING</div><h2>THE LATEST <em>FROM THE GAME</em></h2></div><a class="text-link" href="#newsletter">Get the newsletter ↗</a></div>
-      <div class="news-grid">
-        <article class="feature-card"><div class="feature-image image-one"><span class="image-tag">AFRICAN FOOTBALL</span><span class="image-number">01</span></div><div class="article-meta">FEATURES <span>•</span> 6 MIN READ</div><h3>A continent united by the beautiful game</h3><p>Stories, rivalries and rising talent shaping football across Africa.</p><a href="#africa" class="read-link">Explore African football <b>↗</b></a></article>
-        <article class="story-card"><div class="story-image image-two"><span>WORLD FOOTBALL</span></div><div class="article-meta">ANALYSIS <span>•</span> 4 MIN READ</div><h3>The tactics changing the modern game</h3><a href="#world" class="read-link">Read the story <b>↗</b></a></article>
-        <article class="story-card"><div class="story-image image-three"><span>THE NEXT GENERATION</span></div><div class="article-meta">SCOUTING <span>•</span> 5 MIN READ</div><h3>Meet the future stars to keep an eye on</h3><a href="#africa" class="read-link">Meet the talent <b>↗</b></a></article>
+      <div class="section-head"><div><span class="eyebrow">STAY IN THE GAME</span><h2>LATEST <em>STORIES</em></h2></div><a class="text-link" href="#latest">ALL THE NEWS <b>↗</b></a></div>
+      <div class="filters" role="group" aria-label="Filter stories"><button class="filter active" data-filter="All">All stories</button><button class="filter" data-filter="Africa">Africa</button><button class="filter" data-filter="Europe">Europe</button><button class="filter" data-filter="World">World</button><button class="filter" data-filter="Women's football">Women's football</button></div>
+      <div class="news-grid" id="news-grid">
+        <article class="news-card featured-story" data-category="Africa" data-search="african football talent next generation academy"><a class="news-image news-one" href="#africa"><span class="image-tag">AFRICA</span></a><div class="news-body"><span class="category">AFRICAN FOOTBALL <i>·</i> DEVELOPMENT</span><h3><a href="#africa">The next generation: how African academies are shaping football's future</a></h3><p>Across the continent, a new wave of talent is finding its pathway to the world stage.</p><div class="meta"><span>TOUCHLINE DESK</span><span>FEATURE STORY</span></div></div></article>
+        <article class="news-card" data-category="Europe" data-search="europe club football tactics changing game"><a class="news-image news-two" href="#world"><span class="image-tag">EUROPE</span></a><div class="news-body"><span class="category">WORLD FOOTBALL <i>·</i> ANALYSIS</span><h3><a href="#world">The tactical ideas changing the modern game</a></h3><p>A closer look at the trends shaping football across Europe's top leagues.</p><div class="meta"><span>ANALYSIS</span><span>5 MIN READ</span></div></div></article>
+        <article class="news-card" data-category="Women's football" data-search="women football global growth game"><a class="news-image news-three" href="#features"><span class="image-tag">WOMEN'S GAME</span></a><div class="news-body"><span class="category">WOMEN'S FOOTBALL <i>·</i> THE BIG PICTURE</span><h3><a href="#features">A global game growing stronger every season</a></h3><p>The clubs, players and supporters driving the next chapter of the women's game.</p><div class="meta"><span>THE BIG PICTURE</span><span>4 MIN READ</span></div></div></article>
+        <article class="news-card" data-category="World" data-search="international football national teams supporters"><a class="news-image news-four" href="#world"><span class="image-tag">INTERNATIONAL</span></a><div class="news-body"><span class="category">INTERNATIONAL <i>·</i> CULTURE</span><h3><a href="#world">More than a match: why national teams mean everything</a></h3><p>Football's power to bring communities together reaches far beyond the pitch.</p><div class="meta"><span>FOOTBALL CULTURE</span><span>6 MIN READ</span></div></div></article>
+        <article class="news-card" data-category="Africa" data-search="caf continental club football african clubs"><a class="news-image news-five" href="#africa"><span class="image-tag">CAF</span></a><div class="news-body"><span class="category">AFRICAN FOOTBALL <i>·</i> CLUB GAME</span><h3><a href="#africa">The clubs carrying African ambition onto the continental stage</a></h3><p>Tradition, rivalry and ambition: the heartbeat of club football across Africa.</p><div class="meta"><span>CLUB FOCUS</span><span>3 MIN READ</span></div></div></article>
+        <article class="news-card" data-category="World" data-search="football grassroots community pitches world"><a class="news-image news-six" href="#features"><span class="image-tag">THE CULTURE</span></a><div class="news-body"><span class="category">THE GAME <i>·</i> COMMUNITY</span><h3><a href="#features">Where it all begins: football belongs to the people</a></h3><p>From local pitches to packed stadiums, the soul of the game lives everywhere.</p><div class="meta"><span>FOOTBALL CULTURE</span><span>4 MIN READ</span></div></div></article>
       </div>
-      <p class="demo-note">Preview content: replace these sample story cards with verified reporting and current articles before launch.</p>
+      <p class="no-results" id="no-results" hidden>No stories match that search. Try another team, league or topic.</p>
     </section>
-    <section class="africa-band" id="africa"><div class="wrap africa-inner"><div class="africa-art"><div class="africa-orbit">AFRICA<br><b>RISES</b></div><div class="africa-star">✳</div></div><div class="africa-copy"><div class="eyebrow light">ROOTED HERE. FOLLOWING EVERYWHERE.</div><h2>THE HEART OF<br>THE GAME IS <em>AFRICAN.</em></h2><p>From the CAF Champions League to local derbies and national team nights, African football deserves the spotlight. This is your front row seat.</p><a class="btn btn-lime" href="#leagues">Explore African football <span>→</span></a></div></div></section>
-    <section class="section wrap" id="world"><div class="section-head"><div><div class="eyebrow">FROM EVERY CORNER</div><h2>THE WORLD <em>GAME</em></h2></div><p class="section-intro">Big nights, iconic clubs and emerging football cultures. Follow the stories that move the sport.</p></div><div class="world-grid"><a class="world-tile" href="#leagues"><span>01 / EUROPE</span><b>THE BIG<br>STAGES</b><i>↗</i></a><a class="world-tile tile-asia" href="#leagues"><span>02 / ASIA</span><b>A GAME<br>ON THE RISE</b><i>↗</i></a><a class="world-tile tile-americas" href="#leagues"><span>03 / AMERICAS</span><b>PASSION<br>IN EVERY CITY</b><i>↗</i></a></div></section>
-    <section class="fixtures-section" id="fixtures"><div class="wrap fixtures-inner"><div><div class="eyebrow light">PLAN YOUR MATCHDAY</div><h2>FIXTURES &<br><em>RESULTS</em></h2><p>Find upcoming matches, follow your teams and never miss a kick.</p></div><div class="fixture-panel"><div class="fixture-panel-top"><b>MATCH CENTRE</b><span>COMING SOON</span></div><div class="fixture-placeholder"><div class="fixture-icon">⚽</div><h3>Your matchday starts here.</h3><p>Live scores, fixtures and results will appear here when a verified football data source is connected.</p></div></div></div></section>
-    <section class="section wrap" id="leagues"><div class="section-head"><div><div class="eyebrow">FOLLOW YOUR COMPETITION</div><h2>LEAGUES <em>& TOURNAMENTS</em></h2></div></div><div class="league-grid"><div class="league-item"><span>AFRICA</span><b>CAF Champions League</b><i>↗</i></div><div class="league-item"><span>AFRICA</span><b>CAF Confederation Cup</b><i>↗</i></div><div class="league-item"><span>ENGLAND</span><b>Premier League</b><i>↗</i></div><div class="league-item"><span>SPAIN</span><b>La Liga</b><i>↗</i></div><div class="league-item"><span>EUROPE</span><b>UEFA Champions League</b><i>↗</i></div><div class="league-item"><span>WORLD</span><b>International Football</b><i>↗</i></div></div></section>
-    <section class="newsletter" id="newsletter"><div class="wrap newsletter-inner"><div><div class="eyebrow light">NEVER MISS A MOMENT</div><h2>THE GAME<br>COMES TO <em>YOU.</em></h2><p>Get the biggest stories and African football highlights in your inbox.</p></div><form class="newsletter-form" id="newsletterForm"><label for="email">YOUR EMAIL ADDRESS</label><div class="email-row"><input id="email" type="email" placeholder="you@example.com" required><button type="submit" aria-label="Subscribe">→</button></div><small id="formMessage">Newsletter sign-up will be activated when an email service is connected.</small></form></div></section>
+    <section class="africa-band" id="africa"><div class="wrap africa-inner"><div><span class="eyebrow">OUR HOME TURF</span><h2>AFRICA IS<br><em>THE STORY.</em></h2><p>From local derbies to continental nights, discover the people, clubs and competitions driving African football forward.</p><a class="button button-light" href="#latest">Explore African stories <span>→</span></a></div><div class="africa-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="africa-stamp">THE<br>GAME<br>IS OURS<span>✦</span></div><div class="africa-caption">54 NATIONS. ONE PASSION.</div></div></div></section>
+    <section class="section wrap" id="world"><div class="section-head"><div><span class="eyebrow">BEYOND BORDERS</span><h2>THE GLOBAL <em>GAME</em></h2></div><p class="section-intro">Every league, every level, every voice. Follow football wherever it takes you.</p></div><div class="world-grid"><a class="world-tile tile-europe" href="#latest"><span>01 / EUROPE</span><b>THE BIG<br>STAGES ↗</b></a><a class="world-tile tile-americas" href="#latest"><span>02 / AMERICAS</span><b>PASSION<br>UNLEASHED ↗</b></a><a class="world-tile tile-asia" href="#latest"><span>03 / ASIA</span><b>RISING<br>FORCES ↗</b></a><a class="world-tile tile-women" href="#latest"><span>04 / WOMEN'S GAME</span><b>THE FUTURE<br>IS NOW ↗</b></a></div></section>
+    <section class="fixtures-section" id="fixtures"><div class="wrap fixtures-inner"><div><span class="eyebrow">PLAN YOUR NEXT 90</span><h2>THE MATCHDAY<br><em>CALENDAR.</em></h2><p>Keep an eye on the games that matter. Match schedules and live scores will be added when a verified data source is connected.</p></div><div class="fixture-placeholder"><div class="fixture-top"><span>MATCH CENTRE</span><span class="coming-soon">COMING SOON</span></div><div class="fixture-empty"><span class="fixture-ball">⚽</span><b>THE NEXT KICK-OFF STARTS HERE.</b><small>Fixtures, results and live match updates.</small></div></div></div></section>
+    <section class="newsletter wrap" id="features"><div><span class="eyebrow">STRAIGHT TO YOUR INBOX</span><h2>DON'T MISS<br><em>A MOMENT.</em></h2><p>Get the best of Touchline Africa — big stories, sharp analysis and the voices of the global game.</p></div><form class="newsletter-form" id="newsletter-form"><label for="email">YOUR EMAIL ADDRESS</label><div class="email-row"><input id="email" type="email" placeholder="you@example.com" required><button type="submit" aria-label="Subscribe">JOIN ↗</button></div><small id="form-message">Newsletter sign-up preview. Email collection will be enabled after a mailing service is connected.</small></form></section>
   </main>
-  <footer><div class="wrap footer-inner"><a class="brand footer-brand" href="#"><span class="brand-mark">T<span>A</span></span><span class="brand-name">TOUCHLINE <b>AFRICA</b><small>FOOTBALL, WITHOUT BORDERS</small></span></a><span>© <span id="year"></span> TOUCHLINE AFRICA. ALL RIGHTS RESERVED.</span><a href="#home">BACK TO TOP ↑</a></div></footer>
+  <footer class="site-footer"><div class="wrap footer-main"><a class="brand footer-brand" href="#"><span class="brand-mark">T<span>A</span></span><span class="brand-name">TOUCHLINE <b>AFRICA</b><small>FOOTBALL, WITHOUT BORDERS</small></span></a><p>The world of football, told with an African perspective.</p><div class="footer-links"><a href="#latest">News</a><a href="#africa">Africa</a><a href="#world">World</a><a href="#fixtures">Fixtures</a></div></div><div class="wrap footer-bottom"><span>© <span id="year"></span> TOUCHLINE AFRICA. ALL RIGHTS RESERVED.</span><span>INDEPENDENT FOOTBALL. GLOBAL PERSPECTIVE.</span></div></footer>
   <script src="script.js"></script>
 </body>
 </html>
