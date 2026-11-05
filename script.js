@@ -1,24 +1,5 @@
-const today = document.getElementById("today");
-const now = new Date();
-today.textContent = new Intl.DateTimeFormat("en-ZA", { day: "2-digit", month: "short", year: "numeric" }).format(now).toUpperCase();
-document.getElementById("year").textContent = now.getFullYear();
-
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
-menuToggle.addEventListener("click", () => {
-  const open = mainNav.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(open));
-  menuToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
-  menuToggle.textContent = open ? "×" : "☰";
-});
-mainNav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
-  mainNav.classList.remove("open");
-  menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.textContent = "☰";
-}));
-
-document.getElementById("newsletterForm").addEventListener("submit", event => {
-  event.preventDefault();
-  document.getElementById("formMessage").textContent =
-    "Thanks for your interest! Newsletter delivery is not active yet — connect an email platform to collect subscriptions.";
-});
+const dateNode=document.getElementById('today-date');if(dateNode){dateNode.textContent=new Intl.DateTimeFormat('en-ZA',{weekday:'short',day:'2-digit',month:'short',year:'numeric'}).format(new Date()).toUpperCase()}document.getElementById('year').textContent=new Date().getFullYear();
+const menuToggle=document.getElementById('menu-toggle');const nav=document.getElementById('main-nav');menuToggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.textContent=open?'✕':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='☰'}));
+const searchPanel=document.getElementById('search-panel');document.getElementById('search-toggle').addEventListener('click',()=>{searchPanel.classList.toggle('open');if(searchPanel.classList.contains('open'))document.getElementById('search-input').focus()});
+let activeFilter='All';const searchInput=document.getElementById('search-input');const cards=[...document.querySelectorAll('.news-card')];const noResults=document.getElementById('no-results');function filterStories(){const term=searchInput.value.trim().toLowerCase();let shown=0;cards.forEach(card=>{const category=card.dataset.category;const searchable=(card.dataset.search+' '+card.innerText).toLowerCase();const visible=(activeFilter==='All'||category===activeFilter)&&(!term||searchable.includes(term));card.hidden=!visible;if(visible)shown++});noResults.hidden=shown!==0}document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>{document.querySelector('.filter.active').classList.remove('active');button.classList.add('active');activeFilter=button.dataset.filter;filterStories()}));searchInput.addEventListener('input',filterStories);document.getElementById('clear-search').addEventListener('click',()=>{searchInput.value='';activeFilter='All';document.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b.dataset.filter==='All'));filterStories()});
+document.getElementById('newsletter-form').addEventListener('submit',event=>{event.preventDefault();const message=document.getElementById('form-message');message.textContent='Thanks for your interest! Newsletter sign-up is a preview and is not yet connected to an email service.';message.style.color='#547b2f';event.target.reset()});
